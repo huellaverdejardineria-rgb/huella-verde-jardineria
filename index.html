@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Huella Verde Jardinería: diseño, mantenimiento de jardines, poda, césped sintético y vivero virtual.">
+<meta name="theme-color" content="#10120f">
+<title>Huella Verde Jardinería | Naturaleza que deja huella</title>
+<style>
+:root{--bg:#10120f;--panel:#181b17;--panel2:#20251e;--green:#83b94b;--green2:#a3d36b;--white:#f5f6f2;--muted:#b7bdb1;--line:#343a30}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(12,14,12,.94);backdrop-filter:blur(12px);border-bottom:1px solid #2d332b}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.logo{width:76px;height:58px;display:block;overflow:hidden;border-radius:8px;background:#000}.logo img{width:100%;height:100%;object-fit:contain;display:block}
+.brand small{display:block;color:var(--green2);font-size:10px;letter-spacing:2px;font-weight:600}
+nav{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700}
+nav a:hover{color:var(--green2)}.nav-actions{display:flex;gap:9px;align-items:center}
+.social{width:38px;height:38px;border:1px solid #596050;border-radius:50%;display:grid;place-items:center;font-weight:bold}
+.social.whats{background:#4d8d31;border-color:#4d8d31}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 12px;border-radius:8px}
+.hero{min-height:490px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#0c0e0c 0%,rgba(12,14,12,.97) 38%,rgba(12,14,12,.48) 100%),url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero:after{content:"";position:absolute;right:8%;bottom:42px;width:130px;height:130px;border:1px solid var(--green);border-radius:50%;box-shadow:0 0 50px #83b94b22}
+.hero-content{position:relative;z-index:1;max-width:620px;padding:72px 0}
+.eyebrow{color:var(--green2);font-weight:800;letter-spacing:3px;font-size:13px;text-transform:uppercase}
+h1{font-size:clamp(36px,5vw,60px);line-height:1.06;margin:16px 0}
+.hero p{font-size:17px;color:#d2d7ce;max-width:540px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:24px;border:1px solid var(--green);font-size:13px;font-weight:800;letter-spacing:.4px;transition:.2s}
+.btn.primary{background:linear-gradient(100deg,#5b9636,#83b94b);color:#fff}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.btn.outline{border-color:#d7ddd2}.trust{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid #41483d;margin-top:36px;padding-top:20px;color:#e0e5dc;font-size:13px}
+.trust span{display:flex;align-items:center;gap:8px}.trust b{color:var(--green2);font-size:20px}
+section{padding:54px 0;border-bottom:1px solid #292e27}
+.section-title{text-align:center;margin:0 0 28px}
+.section-title h2{color:var(--green2);font-size:20px;letter-spacing:3px;margin:0 0 5px;text-transform:uppercase}
+.section-title p{color:var(--muted);margin:0;font-size:14px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.service{background:linear-gradient(145deg,#1c201b,#141713);border:1px solid #30372d;border-radius:10px;padding:22px;text-align:center;min-height:185px}
+.service .ico{font-size:34px;color:var(--green2)}.service h3{font-size:16px;margin:8px 0}.service p{font-size:13px;color:var(--muted);margin:0}
+.filters{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.filter{background:transparent;border:1px solid #555e4e;color:#e9eee5;padding:8px 14px;border-radius:18px;font-size:11px;font-weight:700}
+.filter.active,.filter:hover{background:var(--green);border-color:var(--green);color:#fff}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.product{background:#1a1e19;border:1px solid #333a30;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.product img{width:100%;height:170px;object-fit:cover;background:#e9eee5}
+.product-info{padding:13px;display:flex;flex-direction:column;flex:1}
+.product h3{font-size:15px;margin:0 0 3px}.product .meta{font-size:12px;color:var(--muted)}
+.price{font-size:17px;font-weight:800;margin:10px 0;color:#fff}
+.product button{margin-top:auto;border:1px solid var(--green);color:var(--green2);background:transparent;border-radius:7px;padding:9px;font-size:12px;font-weight:800}
+.product button:hover{background:#314725}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.gallery img{width:100%;height:190px;object-fit:cover;border-radius:9px;border:1px solid var(--line)}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.about h2{font-size:30px;margin:0 0 12px}.about p{color:var(--muted)}
+.about-art{min-height:260px;border-radius:14px;background:linear-gradient(135deg,#1b2b17,#10120f 65%),url('https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80') center/cover;border:1px solid #394331}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;text-align:center}
+.contact-card strong{display:block;color:var(--green2);margin-bottom:5px}.contact-card span{font-size:14px;color:#e2e7de}
+footer{padding:28px 0;color:#aeb5a8;font-size:12px}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cart-fab{position:fixed;right:20px;bottom:20px;z-index:25;background:var(--green);color:#fff;border:0;border-radius:28px;padding:13px 18px;font-weight:800;box-shadow:0 8px 30px #0008}
+.cart-count{background:#172313;border-radius:50%;padding:2px 7px;margin-left:5px}
+.modal{display:none;position:fixed;inset:0;background:#000a;z-index:40;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}.modal-box{width:min(520px,100%);max-height:85vh;overflow:auto;background:#171b16;border:1px solid #46513e;border-radius:14px;padding:22px}
+.modal-head{display:flex;justify-content:space-between;align-items:center}.close{background:none;border:0;color:#fff;font-size:25px}
+.cart-line{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:10px 0;font-size:14px}
+.qty button{background:#2b3825;color:white;border:0;border-radius:5px;padding:3px 8px;margin:0 3px}
+.total{font-size:19px;font-weight:800;text-align:right;margin:16px 0}
+input,textarea{width:100%;background:#0f120e;border:1px solid #46513e;border-radius:7px;color:white;padding:11px;margin:6px 0 12px}
+label{font-size:12px;color:var(--muted)}
+.note{font-size:12px;color:#aeb8a4}
+@media(max-width:850px){nav{gap:13px;font-size:12px}.products{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.nav{min-height:66px}.menu-btn{display:block}nav{display:none;position:absolute;top:66px;left:0;right:0;background:#11140f;padding:18px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}nav.show{display:flex}.nav-actions{display:none}.hero{min-height:540px;background-position:62% center}.hero-content{padding:60px 0}.trust{gap:12px}.services{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr;gap:9px}.product img{height:130px}.product-info{padding:10px}.gallery{grid-template-columns:1fr 1fr}.gallery img{height:130px}.about{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.section-title h2{font-size:17px}}
+@media(max-width:390px){.services,.products{grid-template-columns:1fr}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="#inicio"><span class="logo"><img src="assets/logo-huella-verde.jpg" alt="Logo Huella Verde Jardinería"></span></a>
+<button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('show')">☰ Menú</button>
+<nav><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#catalogo">Catálogo de plantas</a><a href="#galeria">Galería</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+<div class="nav-actions"><a class="social" href="https://www.instagram.com/huellaverdejardineriaa/" target="_blank" aria-label="Instagram">◎</a><a class="social" href="https://www.facebook.com/huellaverdejardineriaa/" target="_blank" aria-label="Facebook">f</a><a class="social whats" href="https://wa.me/573112596913" target="_blank" aria-label="WhatsApp">◉</a></div>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="container"><div class="hero-content">
+<div class="eyebrow">Huella Verde Jardinería</div><h1>Transformamos espacios, cultivamos vida</h1>
+<p>Brindamos soluciones integrales en jardinería y paisajismo. Diseñamos, mantenemos y embellecemos tus espacios con pasión y compromiso.</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/573112596913?text=Hola%20Huella%20Verde%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank">☏ Escríbenos por WhatsApp</a><a class="btn outline" href="#catalogo">Ver catálogo de plantas　↘</a></div>
+<div class="trust"><span><b>✦</b> Experiencia y compromiso</span><span><b>♧</b> Materiales de calidad</span><span><b>❀</b> Diseño personalizado</span><span><b>▦</b> Mantenimiento profesional</span></div>
+</div></div></section>
+<section id="servicios"><div class="container"><div class="section-title"><h2>Nuestros servicios</h2><p>Cuidamos cada detalle para que tus espacios verdes florezcan</p></div>
+<div class="services">
+<article class="service"><div class="ico">🌱</div><h3>Mantenimiento de jardines</h3><p>Cuidado integral para que tus jardines siempre luzcan saludables y hermosos.</p></article>
+<article class="service"><div class="ico">🌳</div><h3>Poda de árboles y arbustos</h3><p>Poda técnica y estética para promover el crecimiento saludable y seguro.</p></article>
+<article class="service"><div class="ico">🪴</div><h3>Diseño de jardines</h3><p>Diseñamos espacios verdes únicos, funcionales y sostenibles.</p></article>
+<article class="service"><div class="ico">🌾</div><h3>Instalación de césped sintético</h3><p>Instalación profesional, preparación de superficies y acabados perfectos.</p></article>
+<article class="service"><div class="ico">🪲</div><h3>Control de plagas y fumigación</h3><p>Soluciones para proteger tus plantas y mantener tus zonas verdes sanas.</p></article>
+<article class="service"><div class="ico">🌺</div><h3>Venta de plantas y accesorios</h3><p>Variedad de plantas ornamentales, tierra, materas y accesorios.</p></article>
+</div></div></section>
+<section id="catalogo"><div class="container"><div class="section-title"><h2>Catálogo de plantas</h2><p>Elige tus favoritas y agrégalas al carrito para solicitar tu pedido</p></div>
+<div class="filters" id="filters"><button class="filter active" data-cat="Todas">Todas</button><button class="filter" data-cat="Interior">Interior</button><button class="filter" data-cat="Exterior">Exterior</button><button class="filter" data-cat="Ornamentales">Ornamentales</button><button class="filter" data-cat="Suculentas">Suculentas</button><button class="filter" data-cat="Árboles">Árboles</button><button class="filter" data-cat="Palmas">Palmas</button><button class="filter" data-cat="Aromáticas">Aromáticas</button><button class="filter" data-cat="Frutales">Frutales</button><button class="filter" data-cat="Materas">Materas</button><button class="filter" data-cat="Sustratos y abonos">Sustratos y abonos</button><button class="filter" data-cat="Accesorios">Accesorios</button></div>
+<div class="products" id="products"></div>
+<p class="note">*Catálogo inicial de referencia. Actualiza precios, fotos y existencias en catalogo.js antes de publicar. Confirma disponibilidad y domicilio por WhatsApp.</p>
+</div></section>
+<section id="galeria"><div class="container"><div class="section-title"><h2>Nuestros trabajos</h2><p>Ideas y espacios verdes que inspiran</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=700&q=80" alt="Jardín con flores">
+<img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=80" alt="Plantas en jardinera">
+<img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80" alt="Jardín paisajístico">
+</div></div></section>
+<section id="nosotros"><div class="container about"><div><div class="eyebrow">Quiénes somos</div><h2>Naturaleza que deja huella</h2><p>En Huella Verde Jardinería trabajamos para transformar y mantener espacios llenos de vida. Te acompañamos desde la idea y el diseño hasta la instalación y el cuidado de tus zonas verdes.</p><p>Cuéntanos qué espacio quieres renovar y construiremos una propuesta a tu medida.</p><a class="btn primary" href="https://wa.me/573112596913?text=Hola%2C%20quiero%20cotizar%20un%20proyecto%20de%20jardiner%C3%ADa" target="_blank">Solicitar cotización</a></div><div class="about-art" role="img" aria-label="Plantas decorativas"></div></div></section>
+<section id="contacto"><div class="container"><div class="section-title"><h2>Hablemos de tu proyecto</h2><p>Estamos listos para ayudarte a crear espacios llenos de vida</p></div><div class="contact-grid">
+<div class="contact-card"><strong>WhatsApp</strong><span>311 259 6913</span></div><div class="contact-card"><strong>Correo</strong><span>huellaverdejardineria@gmail.com</span></div><div class="contact-card"><strong>Ubicación</strong><span>Bogotá y alrededores</span></div>
+</div></div></section>
+</main>
+<footer><div class="container footer-row"><span><img src="assets/logo-huella-verde.jpg" alt="Huella Verde" style="width:90px;height:48px;object-fit:contain;vertical-align:middle;margin-right:12px">© 2026 Huella Verde Jardinería. Todos los derechos reservados.</span><span>Diseñado con ♥ para la naturaleza 🌿</span></div></footer>
+<button class="cart-fab" onclick="openCart()">🛒 Mi carrito <span class="cart-count" id="count">0</span></button>
+<div class="modal" id="cartModal" onclick="if(event.target===this)closeCart()"><div class="modal-box"><div class="modal-head"><h2>Tu pedido</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartItems"></div><div class="total" id="total">Total: $0 COP</div><label for="customer">Tu nombre</label><input id="customer" placeholder="Nombre y apellido"><label for="address">Barrio o dirección de entrega (opcional)</label><input id="address" placeholder="Ciudad / barrio / dirección"><label for="extra">Notas del pedido (opcional)</label><textarea id="extra" rows="2" placeholder="Tamaño, color de matera, dudas..."></textarea><button class="btn primary" style="width:100%" onclick="checkout()">Enviar pedido por WhatsApp</button><p class="note">El pedido se enviará a WhatsApp para confirmar existencias, domicilio y forma de pago. No se realiza cobro en esta página.</p></div></div>
+<script src="catalogo.js"></script>
+<script>
+const plants=window.HUELLA_CATALOG;
+// Catalogo editable: modifica catalogo.js para cambiar productos, fotos y precios.
+let cart={};
+const money=n=>"$"+n.toLocaleString("es-CO")+" COP";
+function renderProducts(category="Todas"){
+ const list=plants.filter(p=>category==="Todas"||p.cat===category);
+ document.getElementById("products").innerHTML=list.map(p=>`<article class="product"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"><div class="product-info"><h3>${p.name}</h3><div class="meta">${p.cat} · ${p.size||"Presentación por confirmar"}</div><div class="price">${money(p.price)}</div><button onclick="addToCart('${p.name}')">＋ Agregar al carrito</button></div></article>`).join("")||'<div class="empty">Pronto tendremos más plantas en esta categoría.</div>';
+}
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts(b.dataset.cat)}));
+function addToCart(name){cart[name]=(cart[name]||0)+1;updateCart();document.getElementById("count").textContent=Object.values(cart).reduce((a,b)=>a+b,0)}
+function updateCart(){let entries=Object.entries(cart).filter(([n,q])=>q>0);document.getElementById("cartItems").innerHTML=entries.length?entries.map(([n,q])=>{let p=plants.find(x=>x.name===n);return `<div class="cart-line"><div><b>${n}</b><br>${money(p.price)} c/u</div><div class="qty"><button onclick="changeQty('${n}',-1)">−</button>${q}<button onclick="changeQty('${n}',1)">＋</button></div></div>`}).join(""):'<p class="note">Tu carrito está vacío. Agrega plantas del catálogo.</p>';let total=entries.reduce((s,[n,q])=>s+plants.find(p=>p.name===n).price*q,0);document.getElementById("total").textContent="Total: "+money(total)}
+function changeQty(n,d){cart[n]=(cart[n]||0)+d;if(cart[n]<=0)delete cart[n];document.getElementById("count").textContent=Object.values(cart).reduce((a,b)=>a+b,0);updateCart()}
+function openCart(){updateCart();document.getElementById("cartModal").classList.add("open")}function closeCart(){document.getElementById("cartModal").classList.remove("open")}
+function checkout(){let entries=Object.entries(cart).filter(([n,q])=>q>0);if(!entries.length){alert("Agrega al menos una planta al carrito.");return}let total=entries.reduce((s,[n,q])=>s+plants.find(p=>p.name===n).price*q,0);let name=document.getElementById("customer").value||"Cliente";let address=document.getElementById("address").value||"Por confirmar";let extra=document.getElementById("extra").value||"Sin notas";let lines=entries.map(([n,q])=>`• ${n} x ${q} = ${money(plants.find(p=>p.name===n).price*q)}`).join("\n");let msg=`Hola Huella Verde Jardinería. Quiero realizar este pedido:\n\n${lines}\n\nTotal estimado: ${money(total)}\nNombre: ${name}\nEntrega: ${address}\nNotas: ${extra}\n\nPor favor confirmen disponibilidad, domicilio y medios de pago.`;window.open("https://wa.me/573112596913?text="+encodeURIComponent(msg),"_blank")}
+renderProducts();
+</script>
+</body></html>

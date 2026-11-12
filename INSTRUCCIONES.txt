@@ -1,0 +1,33 @@
+HUELLA VERDE JARDINERÍA — SITIO WEB EDITABLE
+
+CONTENIDO
+- index.html: diseño y estructura de la página.
+- catalogo.js: catálogo editable con plantas, materas, sustratos, abonos y accesorios.
+- assets/logo-huella-verde.jpg: logo original compartido por el propietario.
+
+CATÁLOGO INICIAL
+Incluye 49 referencias de demostración. Los precios son ejemplos y las fotos son imágenes ilustrativas enlazadas desde Unsplash. Antes de publicar, revisa precios, tamaños, existencias y sustituye las fotos por imágenes reales de tus productos cuando las tengas.
+
+CÓMO EDITAR MÁS ADELANTE
+1. Abre catalogo.js en GitHub y pulsa el lápiz (Edit).
+2. Cada producto tiene: name (nombre), cat (categoría), size (tamaño/presentación), price (precio en pesos colombianos, solo número) e img (URL de la fotografía).
+3. Para agregar un producto, duplica una línea completa, cambia sus datos y conserva la coma al final. La última línea puede llevar coma también.
+4. Pulsa Commit changes para guardar. GitHub Pages publicará los cambios automáticamente en unos minutos.
+5. Para cambiar fotos, sube tus imágenes a la carpeta assets y coloca una ruta como 'assets/monstera.jpg' en el campo img.
+
+CÓMO PUBLICAR EN UN REPOSITORIO NUEVO
+1. En GitHub, crea un repositorio público nuevo, por ejemplo huella-verde-jardineria.
+2. En Add file > Upload files, arrastra index.html, catalogo.js y la carpeta assets completa.
+3. Pulsa Commit changes.
+4. En Settings > Pages, en Build and deployment selecciona Deploy from a branch.
+5. Selecciona la rama main y la carpeta /(root), y pulsa Save.
+6. Espera unos minutos. GitHub mostrará la dirección pública del sitio en Settings > Pages.
+
+PEDIDOS
+El carrito arma el pedido y lo envía al WhatsApp 573112596913. No procesa pagos en línea: el cliente confirma inventario, domicilio y forma de pago por WhatsApp.
+
+CONTACTO YA CONFIGURADO
+WhatsApp: 311 259 6913
+Correo: huellaverdejardineria@gmail.com
+Instagram: @huellaverdejardineriaa
+Facebook: https://www.facebook.com/huellaverdejardineriaa/
